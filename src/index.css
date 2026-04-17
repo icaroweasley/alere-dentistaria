@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: rgba(15, 23, 42, 0.7);
+    --accent: #64CEFB;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+  }
+}
+
+@theme {
+  --color-medical-blue: #64CEFB;
+}
