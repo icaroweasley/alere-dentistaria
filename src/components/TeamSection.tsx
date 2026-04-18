@@ -35,15 +35,15 @@ const specialists = [
 
 const TeamSection = () => {
   return (
-    <section id="equipe" className="py-24 px-6 bg-gray-50/50">
+    <section id="equipe" className="py-12 md:py-24 px-6 bg-gray-50/50">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12 md:mb-16">
           <div className="space-y-4">
             <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900"
+              className="text-3xl md:text-5xl font-medium tracking-tight text-gray-900"
             >
               Nossa Equipe !
             </motion.h2>
@@ -69,7 +69,7 @@ const TeamSection = () => {
               transition={{ delay: index * 0.1 }}
               className="group cursor-pointer text-center"
             >
-              <div className="relative aspect-square rounded-full overflow-hidden mb-6 mx-auto max-w-[280px] border-4 border-white shadow-xl">
+              <div className="relative aspect-square rounded-full overflow-hidden mb-6 mx-auto max-w-[200px] md:max-w-[280px] border-4 border-white shadow-xl">
                 <div className="absolute inset-0 bg-medical-blue/0 group-hover:bg-medical-blue/10 transition-colors duration-500" />
                 <img 
                   src={person.image} 
@@ -89,7 +89,7 @@ const TeamSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-24 flex justify-center"
+          className="mt-12 md:mt-24 flex justify-center"
         >
           <motion.a 
             href="https://wa.me/5567999427984" 

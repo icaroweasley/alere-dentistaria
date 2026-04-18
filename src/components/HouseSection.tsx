@@ -25,14 +25,14 @@ const houseImages = [
 
 const HouseSection = () => {
   return (
-    <section id="casa" className="py-24 px-6 bg-gray-50/30">
+    <section id="casa" className="py-12 md:py-24 px-6 bg-gray-50/30">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-10 md:mb-16 space-y-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-medium tracking-tight text-gray-900"
+            className="text-3xl md:text-6xl font-medium tracking-tight text-gray-900"
           >
             Conheça Nossa <span className="text-medical-blue italic">Casa !</span>
           </motion.h2>
@@ -58,14 +58,14 @@ const HouseSection = () => {
               whileHover={{ y: -10 }}
               className="relative group rounded-[2.5rem] overflow-hidden shadow-2xl shadow-gray-200/50 bg-white"
             >
-              <div className="aspect-[4/5] overflow-hidden">
+              <div className="aspect-[3/2] md:aspect-[4/5] overflow-hidden">
                 <img 
                   src={item.src} 
                   alt={item.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
                 />
               </div>
-              <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
                 <h4 className="text-white font-bold text-xl mb-2">{item.title}</h4>
                 <p className="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   {item.desc}

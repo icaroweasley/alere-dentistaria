@@ -3,7 +3,7 @@ import { CheckCircle2, Award } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-24 px-6 bg-gray-50/50">
+    <section id="sobre" className="py-12 md:py-24 px-6 bg-gray-50/50">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -12,7 +12,7 @@ const AboutSection = () => {
           className="space-y-8"
         >
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900 leading-tight">
+            <h2 className="text-2xl md:text-5xl font-medium tracking-tight text-gray-900 leading-tight">
               Uma trajetória de <span className="text-medical-blue">40 anos</span> dedicada à excelência.
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed max-w-xl">

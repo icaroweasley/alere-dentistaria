@@ -105,14 +105,14 @@ const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
 
   return (
-    <section id="servicos" className="py-24 px-6 bg-white relative">
+    <section id="servicos" className="py-12 md:py-24 px-6 bg-white relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 space-y-4">
+        <div className="text-center mb-12 md:mb-20 space-y-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-medium tracking-tight text-gray-900"
+            className="text-3xl md:text-6xl font-medium tracking-tight text-gray-900"
           >
             Nossas <span className="text-medical-blue italic">Especialidades</span>
           </motion.h2>
@@ -121,13 +121,13 @@ const ServicesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-gray-500 max-w-2xl mx-auto text-lg"
+            className="text-gray-500 max-w-2xl mx-auto text-base md:text-lg"
           >
             Toque em um procedimento para saber mais sobre como cuidamos do seu sorriso.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -136,20 +136,20 @@ const ServicesSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.03 }}
               whileHover={{ y: -8 }}
-              onClick={() => setSelectedService(service)}
-              className="group p-10 rounded-[2.5rem] bg-gray-50/50 border border-gray-100 hover:bg-white hover:border-medical-blue/20 transition-all duration-500 hover:shadow-2xl hover:shadow-medical-blue/5 text-center flex flex-col items-center cursor-pointer"
-            >
-              <div className="w-28 h-28 rounded-[2rem] bg-white shadow-xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 overflow-hidden ring-1 ring-gray-100">
+               onClick={() => setSelectedService(service)}
+               className="group p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-gray-50/50 border border-gray-100 hover:bg-white hover:border-medical-blue/20 transition-all duration-500 hover:shadow-2xl hover:shadow-medical-blue/5 text-center flex flex-col items-center cursor-pointer"
+             >
+               <div className="w-20 h-20 md:w-28 md:h-28 rounded-[1.5rem] md:rounded-[2rem] bg-white shadow-xl flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 overflow-hidden ring-1 ring-gray-100">
                 <img 
                   src={service.img} 
                   alt={service.name}
                   className="w-full h-full object-cover scale-175"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 leading-tight">
                 {service.name}
               </h3>
-              <p className="text-base text-gray-400 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed">
                 {service.desc}
               </p>
               
@@ -177,7 +177,7 @@ const ServicesSection = () => {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-2xl bg-white rounded-[3rem] p-8 md:p-12 shadow-2xl overflow-hidden"
+              className="relative w-full max-w-2xl bg-white rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 shadow-2xl overflow-hidden"
             >
               <button 
                 onClick={() => setSelectedService(null)}
@@ -186,8 +186,8 @@ const ServicesSection = () => {
                 <X className="w-6 h-6" />
               </button>
 
-              <div className="flex flex-col items-center text-center space-y-6">
-                <div className="w-32 h-32 rounded-[2rem] bg-gray-50 flex items-center justify-center overflow-hidden ring-4 ring-gray-50 shadow-inner">
+              <div className="flex flex-col items-center text-center space-y-4 md:space-y-6">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-[1.5rem] md:rounded-[2rem] bg-gray-50 flex items-center justify-center overflow-hidden ring-4 ring-gray-50 shadow-inner">
                   <img 
                     src={selectedService.img} 
                     alt={selectedService.name}
@@ -195,14 +195,14 @@ const ServicesSection = () => {
                   />
                 </div>
                 
-                <div className="space-y-4">
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+                <div className="space-y-2 md:space-y-4">
+                  <h3 className="text-2xl md:text-4xl font-bold text-gray-900">
                     {selectedService.name}
                   </h3>
-                  <div className="h-1 w-20 bg-medical-blue mx-auto rounded-full" />
+                  <div className="h-1 w-16 md:w-20 bg-medical-blue mx-auto rounded-full" />
                 </div>
 
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                <p className="text-base md:text-xl text-gray-600 leading-relaxed">
                   {selectedService.fullDesc}
                 </p>
 

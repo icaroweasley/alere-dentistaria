@@ -52,8 +52,8 @@ const ReviewsSection = () => {
   }, [nextSlide]);
 
   return (
-    <section id="depoimentos" className="py-24 px-6 bg-gray-50/50 overflow-hidden">
-      <div className="max-w-7xl mx-auto mb-16 px-4">
+    <section id="depoimentos" className="py-12 md:py-24 px-6 bg-gray-50/50 overflow-hidden">
+      <div className="max-w-7xl mx-auto mb-10 md:mb-16 px-4">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6">
           <div className="space-y-4 text-center md:text-left">
              <motion.span 
@@ -67,7 +67,7 @@ const ReviewsSection = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900"
+              className="text-3xl md:text-5xl font-medium tracking-tight text-gray-900"
             >
               O que dizem nossos <br /> <span className="text-medical-blue italic">pacientes</span>
             </motion.h2>
@@ -98,7 +98,7 @@ const ReviewsSection = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4">
-        <div className="relative h-[520px] md:h-[420px]">
+        <div className="relative h-[480px] md:h-[420px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -106,7 +106,7 @@ const ReviewsSection = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="absolute inset-0 bg-white rounded-[3rem] p-8 md:p-12 lg:p-14 shadow-2xl shadow-gray-200/50 border border-gray-100 flex flex-col justify-between"
+               className="absolute inset-0 bg-white rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-14 shadow-2xl shadow-gray-200/50 border border-gray-100 flex flex-col justify-between"
             >
               <div className="space-y-6">
                 <div className="flex justify-between items-start">
@@ -118,7 +118,7 @@ const ReviewsSection = () => {
                    <Quote className="w-12 h-12 text-blue-50/50 fill-current" />
                 </div>
                 
-                <p className="text-gray-700 text-xl md:text-2xl leading-relaxed italic font-medium">
+                <p className="text-gray-700 text-lg md:text-2xl leading-relaxed italic font-medium">
                   "{reviews[currentIndex].text}"
                 </p>
               </div>
