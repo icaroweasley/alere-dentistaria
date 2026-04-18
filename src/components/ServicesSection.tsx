@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ChevronRight } from 'lucide-react';
 
 const services = [
   { 
@@ -111,49 +111,56 @@ const ServicesSection = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-6xl font-medium tracking-tight text-gray-900"
+            viewport={{ once: false }}
+            className="text-center flex flex-col items-center justify-center gap-2 mb-8 md:mb-12"
           >
-            Nossas <span className="text-medical-blue italic">Especialidades</span>
+            <span className="text-lg md:text-2xl font-bold tracking-widest text-slate-500">Nossas</span>
+            <span className="text-alere-plum font-['Adelia'] text-5xl md:text-7xl font-normal leading-tight drop-shadow-sm px-2">Especialidades</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="text-gray-500 max-w-2xl mx-auto text-base md:text-lg"
           >
             Toque em um procedimento para saber mais sobre como cuidamos do seu sorriso.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: index * 0.03 }}
               whileHover={{ y: -8 }}
                onClick={() => setSelectedService(service)}
-               className="group p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-gray-50/50 border border-gray-100 hover:bg-white hover:border-medical-blue/20 transition-all duration-500 hover:shadow-2xl hover:shadow-medical-blue/5 text-center flex flex-col items-center cursor-pointer"
+               className="group p-4 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-alere-pink/5 border border-alere-pink/10 hover:bg-white hover:border-alere-plum/20 transition-all duration-500 hover:shadow-2xl hover:shadow-alere-plum/5 flex flex-row md:flex-col items-center gap-4 md:gap-0 cursor-pointer text-left md:text-center w-full"
              >
-               <div className="w-20 h-20 md:w-28 md:h-28 rounded-[1.5rem] md:rounded-[2rem] bg-white shadow-xl flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 overflow-hidden ring-1 ring-gray-100">
+               <div className="w-16 h-16 md:w-28 md:h-28 flex-shrink-0 rounded-[1rem] md:rounded-[2rem] bg-white shadow-md md:shadow-xl flex items-center justify-center mb-0 md:mb-8 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 overflow-hidden ring-1 ring-gray-100">
                 <img 
                   src={service.img} 
                   alt={service.name}
-                  className="w-full h-full object-cover scale-175"
+                  className="w-full h-full object-cover scale-[1.3] md:scale-[1.75]"
                 />
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 leading-tight">
-                {service.name}
-              </h3>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed">
-                {service.desc}
-              </p>
+
+              <div className="flex-1 flex items-center justify-between md:block">
+                <div>
+                  <h3 className="text-base md:text-xl font-bold text-gray-900 mb-0 md:mb-3 leading-tight">
+                    {service.name}
+                  </h3>
+                  <p className="hidden md:block text-sm md:text-base text-gray-400 leading-relaxed">
+                    {service.desc}
+                  </p>
+                </div>
+                <ChevronRight className="md:hidden w-5 h-5 text-alere-plum opacity-40 group-hover:opacity-100 transition-opacity" />
+              </div>
               
-              <div className="mt-6 text-medical-blue text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+              <div className="hidden md:flex mt-6 text-alere-plum text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity items-center gap-2">
                 Ver detalhes 
                 <span className="text-lg">→</span>
               </div>
@@ -164,7 +171,7 @@ const ServicesSection = () => {
 
       <AnimatePresence>
         {selectedService && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+          <div className="fixed inset-0 z-[10001] flex items-center justify-center p-6">
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -199,7 +206,7 @@ const ServicesSection = () => {
                   <h3 className="text-2xl md:text-4xl font-bold text-gray-900">
                     {selectedService.name}
                   </h3>
-                  <div className="h-1 w-16 md:w-20 bg-medical-blue mx-auto rounded-full" />
+                  <div className="h-1 w-16 md:w-20 bg-alere-plum mx-auto rounded-full" />
                 </div>
 
                 <p className="text-base md:text-xl text-gray-600 leading-relaxed">
@@ -208,7 +215,7 @@ const ServicesSection = () => {
 
                 <button 
                   onClick={() => setSelectedService(null)}
-                  className="mt-8 px-10 py-4 bg-medical-blue text-white rounded-full font-bold hover:bg-blue-600 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-medical-blue/20"
+                  className="mt-8 px-10 py-4 bg-alere-plum text-white rounded-full font-bold hover:bg-alere-pink transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-alere-plum/20"
                 >
                   Entendi
                 </button>
@@ -221,3 +228,4 @@ const ServicesSection = () => {
   );
 };
 export default ServicesSection;
+

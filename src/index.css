@@ -1,11 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Adelia';
+  src: url('/fonts/adelia.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   :root {
     --bg: #FFFFFF;
     --text-primary: #0F172A;
     --text-secondary: rgba(15, 23, 42, 0.7);
-    --accent: #64CEFB;
+    --accent: #75255b;
   }
 
   body {
@@ -14,8 +26,13 @@
     font-family: 'Inter', sans-serif;
     margin: 0;
   }
+
+  section {
+    scroll-margin-top: 100px;
+  }
 }
 
 @theme {
-  --color-medical-blue: #64CEFB;
+  --color-alere-plum: #75255b;
+  --color-alere-pink: #b0578e;
 }

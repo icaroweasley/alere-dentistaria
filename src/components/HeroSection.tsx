@@ -95,17 +95,20 @@ const HeroSection = () => {
             />
           </h1>
 
-          <motion.button
+          <motion.a
+            href="https://wa.me/5567999427984?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Alere%20Dentistaria."
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.9 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-12 group flex items-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-300 shadow-2xl shadow-black/20"
+            animate={{ opacity: 1, scale: 1, transition: { delay: 0.9, duration: 0.5 } }}
+            transition={{ duration: 0.05 }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.05 } }}
+            whileTap={{ scale: 0.95, transition: { duration: 0.05 } }}
+            className="mt-12 group flex items-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-colors duration-75 shadow-2xl shadow-black/20"
           >
             Agende sua Avaliação
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-75" />
+          </motion.a>
         </div>
 
         {/* Bottom Scroll Indicator / Status */}

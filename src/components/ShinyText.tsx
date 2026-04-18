@@ -16,7 +16,7 @@ const ShinyText = ({ text, className = "" }: ShinyTextProps) => {
           duration: 3,
           ease: "linear",
         }}
-        className="bg-clip-text text-transparent bg-gradient-to-r from-[#64CEFB] via-white to-[#64CEFB] bg-[length:200%_auto]"
+        className="bg-clip-text text-transparent bg-[linear-gradient(to_right,var(--color-alere-plum),#ffffff,var(--color-alere-pink),var(--color-alere-plum))] bg-[length:200%_auto]"
         style={{
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',

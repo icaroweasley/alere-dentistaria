@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <HeroSection />
       
-      <div className="relative z-20">
+      <div className="relative">
         <AboutSection />
         <ServicesSection />
         <HouseSection />
