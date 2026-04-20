@@ -115,7 +115,7 @@ const ServicesSection = () => {
             className="text-center flex flex-col items-center justify-center gap-2 mb-8 md:mb-12"
           >
             <span className="text-lg md:text-2xl font-bold tracking-widest text-slate-500">Nossas</span>
-            <span className="text-alere-plum font-['Adelia'] text-3xl sm:text-4xl md:text-7xl font-normal leading-tight drop-shadow-sm px-8 block w-full tracking-tight">Especialidades</span>
+            <span className="text-alere-plum font-['Adelia'] text-5xl sm:text-6xl md:text-7xl font-normal leading-tight drop-shadow-sm px-8 block w-full tracking-tighter">Especialidades</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
