@@ -81,7 +81,7 @@ const HeroSection = () => {
             Excelência Odontológica em Campo Grande MS
           </motion.span>
           
-          <h1 className="flex flex-col text-5xl md:text-8xl lg:text-[10rem] font-medium leading-[0.85] tracking-tighter text-white">
+          <h1 className="flex flex-col text-4xl sm:text-5xl md:text-8xl lg:text-[10rem] font-medium leading-[0.85] tracking-tighter text-white">
             <motion.span
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
