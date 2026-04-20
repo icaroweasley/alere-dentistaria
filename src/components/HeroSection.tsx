@@ -48,9 +48,9 @@ const HeroSection = () => {
       {/* Dark Overlay for cinematic effect */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl h-full flex flex-col justify-between px-6 pt-24 md:pt-32 pb-8 md:pb-12">
+      <div className="relative z-10 mx-auto max-w-7xl h-full flex flex-col justify-between px-6 pt-36 md:pt-44 pb-8 md:pb-12">
         {/* Top Info Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 md:gap-8">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,12 +76,12 @@ const HeroSection = () => {
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-xs md:text-sm uppercase tracking-[0.2em] text-white/60 mb-6 font-medium"
+            className="text-[10px] md:text-sm uppercase tracking-[0.2em] text-white/60 mb-6 font-medium max-w-[85vw] mx-auto leading-relaxed"
           >
             Excelência Odontológica em Campo Grande MS
           </motion.span>
           
-          <h1 className="flex flex-col text-4xl sm:text-5xl md:text-8xl lg:text-[10rem] font-medium leading-[0.85] tracking-tighter text-white">
+          <h1 className="flex flex-col text-3xl sm:text-5xl md:text-8xl lg:text-[10rem] font-medium leading-[0.85] tracking-tighter text-white">
             <motion.span
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
