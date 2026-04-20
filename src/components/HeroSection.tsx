@@ -36,7 +36,11 @@ const HeroSection = () => {
           loop
           muted
           playsInline
+          poster="/hero-poster.png"
+          preload="auto"
           className="h-full w-full object-cover"
+          // @ts-ignore
+          fetchpriority="high"
         >
           <source
             src="/no_watermark_Vídeo_de_Dente_de_Porcelana_D.mp4"
